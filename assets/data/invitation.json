@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "pageTitle": "Baby Shower de Eillen"
+  },
+  "site": {
+    "couple": "Baby Shower & Revelación de Género"
+  },
+  "nav": {
+    "left": [
+      {
+        "label": "Presentación",
+        "href": "#presentation"
+      },
+      {
+        "label": "Ubicación",
+        "href": "#location"
+      }
+    ],
+    "right": [
+      {
+        "label": "Programa",
+        "href": "#timeline"
+      },
+      {
+        "label": "Confirmación",
+        "href": "#rsvp"
+      }
+    ]
+  },
+  "music": {
+    "src": "assets/audio/cancion.mp3",
+    "autoplay": true
+  },
+  "hero": {
+    "pretitle": "Baby Shower",
+    "names": "Eillen Ellerahi",
+    "date": "2026-06-06T11:30:00",
+    "background": "assets/img/hero.png"
+  },
+  "presentation": {
+    "title": "Pronto habrá una nueva sonrisa iluminando nuestras vidas y con una inmensa alegría preparamos su bienvenida.",
+    "parents": [
+      {
+        "names": [
+          "Eillen Ellerahi Flores Ramirez"
+        ],
+        "note": "Mami"
+      }
+    ],
+    "padrinos": [
+      {
+        "names": [
+          "Tomy",
+          "Roberto"
+        ],
+        "note": "Abuelos"
+      }
+    ],
+    "text": "Acompaña a mi mami a celebrar mi Baby Blessing Way, revelación de género y baby shower.",
+    "icon": "assets/img/conejito.svg"
+  },
+  "gratitude": {
+    "title": "Ceremonia Holística · Baby Blessing",
+    "text": "Una ceremonia para honrar la vida de nuestro bebé y el hermoso camino de la futura mamita. Retomando saberes ancestrales, queremos recordarle que no está sola y rodearla de amor de una manera muy especial. \n\nPor ello, además del presente para el bebé, les pedimos traer un detalle simbólico para mami: una vela, flores, un cuarzo o cualquier objeto significativo que represente desde el corazón el amor y la energía bonita que desean compartir con ella."
+  },
+  "location": {
+    "title": "Ubicación",
+    "subtitle": "Fecha y lugar",
+    "dateText": "06 · Junio · 2026",
+    "places": [
+      {
+        "title": "Recepción",
+        "time": "11:30 AM",
+        "image": "",
+        "place": "San Juan Tianguistongo",
+        "address": "C. 5 de Mayo, San Juan Tianguistongo, Hueypoxtla",
+        "map": ""
+      }
+    ]
+  },
+  "timeline": {
+    "title": "Programa",
+    "items": [
+      {
+        "time": "11:30 AM",
+        "text": "Baby Blessing (Ceremonia Holística)",
+        "icon": "assets/img/1.png"
+      },
+      {
+        "time": "01:30 PM",
+        "text": "Revelación de Género",
+        "icon": "assets/img/2.png"
+      },
+      {
+        "time": "02:00 PM",
+        "text": "Baby Shower",
+        "icon": "assets/img/3.png"
+      }
+    ]
+  },
+  "dresscode": {
+    "title": "Código de Vestimenta",
+    "type": "Blanco y beige",
+    "image": "assets/img/9.svg",
+    "menTitle": "",
+    "womenTitle": "",
+    "men": [],
+    "women": [],
+    "note": "Dress code en tonos blanco y beige"
+  },
+  "gifts": {
+    "title": "Sugerencia de Regalos",
+    "intro": "Lo más importante es compartir este día contigo, pero si deseas obsequiarnos algo, lo recibiremos con mucho cariño.",
+    "options": [
+      {
+        "title": "",
+        "description": "",
+        "type": "link",
+        "url": "",
+        "buttonText": ""
+      },
+      {
+        "title": "",
+        "description": "",
+        "type": "text"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Galería",
+    "type": "images",
+    "items": [
+      "assets/img/gallery/1.jpg",
+      "assets/img/gallery/2.jpg",
+      "assets/img/gallery/3.jpg",
+      "assets/img/gallery/4.jpg",
+      "assets/img/gallery/5.jpg"
+    ]
+  },
+  "rsvp": {
+    "phone": "525572283807",
+    "title": "Confirmación de Asistencia",
+    "intro": "Nos encantará contar contigo. Por favor confirma tu asistencia.",
+    "fields": {
+      "namePlaceholder": "Nombre completo",
+      "attendancePlaceholder": "¿Podrás acompañarnos?",
+      "attendanceOptions": [
+        "Sí asistiré",
+        "No podré asistir"
+      ],
+      "messagePlaceholder": "Mensaje o bendición",
+      "buttonText": "Confirmar por WhatsApp"
+    },
+    "note": "Agradecemos confirmar antes del <strong>22 de mayo de 2026</strong>.",
+    "success": "Gracias por confirmar"
+  },
+  "footer": {
+    "names": "Baby Shower de Eillen",
+    "credits": "Diseñado con amor por Shiny Maker Studio"
+  }
+}
