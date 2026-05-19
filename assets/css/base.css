@@ -543,3 +543,96 @@ p {
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
   }
 }
+
+.falling-leaves {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.falling-leaves span {
+  position: absolute;
+  top: -10%;
+  width: 18px;
+  height: 28px;
+
+  background: linear-gradient(
+    180deg,
+    #4f9b58,
+    #2f6f3b
+  );
+
+  border-radius: 80% 0 80% 0;
+
+  animation: leafFall linear infinite,
+           leafSpin ease-in-out infinite;
+  opacity: 0.82;
+
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.25),
+    0 4px 10px rgba(30,80,40,.25);
+}
+
+.falling-leaves span:nth-child(odd){
+  background: linear-gradient(
+    180deg,
+    #b8d7b8,
+    #7ea67e
+  );
+}
+
+.falling-leaves span:nth-child(even){
+  background: linear-gradient(
+    180deg,
+    #c7dfb8,
+    #89a96f
+  );
+}
+
+@keyframes leafSpin {
+  0% {
+    rotate: 0deg;
+  }
+
+  50% {
+    rotate: 25deg;
+  }
+
+  100% {
+    rotate: -25deg;
+  }
+}
+
+@keyframes leafFall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(55vh) translateX(40px) rotate(180deg);
+  }
+
+  100% {
+    transform: translateY(110vh) translateX(-30px) rotate(360deg);
+  }
+}
+
+.falling-leaves span:nth-child(1) { left: 5%; animation-duration: 6s; animation-delay: 0s; }
+.falling-leaves span:nth-child(2) { left: 16%; animation-duration: 7s; animation-delay: 1s; }
+.falling-leaves span:nth-child(3) { left: 28%; animation-duration: 5s; animation-delay: 2s; }
+.falling-leaves span:nth-child(4) { left: 39%; animation-duration: 8s; animation-delay: .5s; }
+.falling-leaves span:nth-child(5) { left: 50%; animation-duration: 6s; animation-delay: 1.5s; }
+.falling-leaves span:nth-child(6) { left: 62%; animation-duration: 7s; animation-delay: 2.5s; }
+.falling-leaves span:nth-child(7) { left: 73%; animation-duration: 5.5s; animation-delay: 1s; }
+.falling-leaves span:nth-child(8) { left: 84%; animation-duration: 8s; animation-delay: 3s; }
+.falling-leaves span:nth-child(9) { left: 92%; animation-duration: 6.5s; animation-delay: 1.2s; }
+.falling-leaves span:nth-child(10){ left: 45%; animation-duration: 9s; animation-delay: 2s; }
+@media (max-width: 768px) {
+  .falling-leaves span {
+    width: 12px;
+    height: 20px;
+    opacity: 0.5;
+  }
+}
