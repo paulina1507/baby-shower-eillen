@@ -87,6 +87,30 @@
     }
   </style>
 </head>
+<style>
+  .rsvp-passes {
+    margin: 18px 0 25px;
+    text-align: center;
+  }
+
+  .rsvp-passes p {
+    margin-bottom: 14px;
+    font-size: 1.1rem;
+  }
+
+  .passes-card {
+    display: inline-block;
+    padding: 18px 35px;
+    border: 2px solid currentColor;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
 
 <div class="falling-leaves">
   <span></span><span></span><span></span><span></span><span></span>
@@ -230,6 +254,7 @@
       </div>
     </div>
   </section>
+
   <!-- ================= REGALOS ================= 
   <section id="gifts" class="section section--framed">
     <div class="frame-box">
@@ -277,6 +302,17 @@
       <div class="rsvp-content text-center">
         <!-- TÍTULO -->
         <h2 class="section-title reveal-title" id="rsvpTitle"></h2>
+
+        <div class="rsvp-passes reveal-left hidden" id="rsvpPassesBox">
+          <p>
+            Hemos reservado estos lugares<br>
+            en su honor.
+          </p>
+
+          <div class="passes-card">
+            Pase para <span id="rsvpPasses"></span> personas
+          </div>
+        </div>
 
         <!-- INTRO -->
         <p class="rsvp-intro reveal-left" id="rsvpIntro"></p>
@@ -346,6 +382,18 @@
   </footer>
 
   <!-- JS -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const pases = params.get('pases');
+
+    const passesBox = document.getElementById('rsvpPassesBox');
+    const passesText = document.getElementById('rsvpPasses');
+
+    if (pases && !isNaN(pases)) {
+      passesText.textContent = pases;
+      passesBox.classList.remove('hidden');
+    }
+  </script>
   <script src="assets/js/data-loader.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/countdown.js"></script>
