@@ -18,6 +18,10 @@
     ],
     "right": [
       {
+        "label": "Vestimenta",
+        "href": "#dresscode"
+      },
+      {
         "label": "Programa",
         "href": "#timeline"
       },
@@ -57,7 +61,7 @@
       }
     ],
     "text": "Acompaña a mi mami a celebrar mi Baby Blessing Way, revelación de género y baby shower.",
-    "icon": "assets/img/conejito.svg"
+    "icon": ""
   },
   "gratitude": {
     "title": "Ceremonia Holística · Baby Blessing",
@@ -74,7 +78,7 @@
         "image": "",
         "place": "San Juan Tianguistongo",
         "address": "C. 5 de Mayo, San Juan Tianguistongo, Hueypoxtla",
-        "map": ""
+        "map": "https://maps.app.goo.gl/XzkgHMFfpBVctr58A"
       }
     ]
   },

@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navRight.innerHTML = navLeft.innerHTML + navRight.innerHTML;
         navLeft.style.display = "none";
       }
-      
+
       /* =====================================================
          HERO
          ===================================================== */
@@ -132,29 +132,74 @@ document.addEventListener("DOMContentLoaded", () => {
          LOCATION
          ===================================================== */
 
+      /* =====================================================
+   LOCATION
+   ===================================================== */
+
       const locationTitle = document.getElementById("locationTitle");
       const locationSubtitle = document.getElementById("locationSubtitle");
       const locationDate = document.getElementById("locationDate");
       const locationGrid = document.getElementById("locationGrid");
 
-      if (locationTitle) locationTitle.innerHTML = data.location?.title || "";
-      if (locationSubtitle)
+      if (locationTitle) {
+        locationTitle.innerHTML = data.location?.title || "";
+      }
+
+      if (locationSubtitle) {
         locationSubtitle.innerHTML = data.location?.subtitle || "";
-      if (locationDate) locationDate.innerHTML = data.location?.dateText || "";
+      }
+
+      if (locationDate) {
+        locationDate.innerHTML = data.location?.dateText || "";
+      }
 
       if (locationGrid && data.location?.places) {
+
         locationGrid.innerHTML = "";
+
+        // 👇 SI SOLO HAY 1 CARD
+        if (data.location.places.length === 1) {
+          locationGrid.classList.add("location-grid-single");
+        } else {
+          locationGrid.classList.remove("location-grid-single");
+        }
+
         data.location.places.forEach((place) => {
+
           locationGrid.innerHTML += `
-            <div class="location-card reveal-zoom">
-              <h3 class="location-card-title">${place.title}</h3>
-              <p class="location-time">${place.time}</p>
-              ${place.image ? `<img src="${place.image}" alt="${place.title}">` : ""}
-              <p class="location-place">${place.place}</p>
-              <p class="location-address">${place.address}</p>
-              <a href="${place.map}" class="btn btn-primary" target="_blank">Ver mapa</a>
-            </div>
-          `;
+      <div class="location-card reveal-zoom">
+        
+        <h3 class="location-card-title">
+          ${place.title}
+        </h3>
+
+        <p class="location-time">
+          ${place.time}
+        </p>
+
+        ${place.image
+              ? `<img src="${place.image}" alt="${place.title}">`
+              : ""
+            }
+
+        <p class="location-place">
+          ${place.place}
+        </p>
+
+        <p class="location-address">
+          ${place.address}
+        </p>
+
+        <a
+          href="${place.map}"
+          class="btn btn-primary"
+          target="_blank"
+        >
+          Ver mapa
+        </a>
+
+      </div>
+    `;
         });
       }
 
@@ -173,19 +218,17 @@ document.addEventListener("DOMContentLoaded", () => {
           timelineContainer.innerHTML += `
             <div class="timeline-row ${i % 2 ? "is-flip" : ""}">
               <div class="timeline-side timeline-side--left">
-                ${
-                  i % 2 === 0
-                    ? `<img class="timeline-icon" src="${item.icon}">`
-                    : `<div class="timeline-text"><span class="time">${item.time}</span>${item.text}</div>`
-                }
+                ${i % 2 === 0
+              ? `<img class="timeline-icon" src="${item.icon}">`
+              : `<div class="timeline-text"><span class="time">${item.time}</span>${item.text}</div>`
+            }
               </div>
               <div class="timeline-center"><span class="timeline-point"></span></div>
               <div class="timeline-side timeline-side--right">
-                ${
-                  i % 2
-                    ? `<img class="timeline-icon" src="${item.icon}">`
-                    : `<div class="timeline-text"><span class="time">${item.time}</span>${item.text}</div>`
-                }
+                ${i % 2
+              ? `<img class="timeline-icon" src="${item.icon}">`
+              : `<div class="timeline-text"><span class="time">${item.time}</span>${item.text}</div>`
+            }
               </div>
             </div>
           `;
@@ -213,13 +256,12 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="gift-item reveal-zoom">
         <h4 class="gift-title">${gift.title}</h4>
         <p class="gift-desc">${gift.description}</p>
-        ${
-          gift.type === "link"
-            ? `<a href="${gift.url}" target="_blank" class="gift-button">
+        ${gift.type === "link"
+                ? `<a href="${gift.url}" target="_blank" class="gift-button">
                 ${gift.buttonText}
                </a>`
-            : ""
-        }
+                : ""
+              }
       </div>
     `;
           });
